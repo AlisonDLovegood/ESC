@@ -1,0 +1,190 @@
+class Main{
+    function void main(){
+        var int tentativas_restantes, i, j, tamanho, letras_corretas;
+        var char c, key;
+        var Array palavras;
+        var Array letras_erradas;
+        var Array array_da_palavra;
+        var Array array_oculto_da_palavra;
+        var boolean letra_encontrada, jogar;
+        var Random random;
+        var String palavra, letra, aux;
+
+        // ---------------------------------------   -CRIANDO OS CIRCULOS/VIDAS-   --------------------------------------------
+        // vidas utilizando circulos por nao conseguir utilizar os corações   
+        var Circulo circulo1, circulo2, circulo3, circulo4, circulo5;
+        let circulo1 = Circulo.new(210, 30, 3);
+        let circulo2 = Circulo.new(230, 30, 4);
+        let circulo3 = Circulo.new(250, 30, 5);
+        let circulo4 = Circulo.new(270, 30, 4);
+        let circulo5 = Circulo.new(290, 30, 3);
+        // -------------------------------------------------------------------------------------------------------------------
+
+        // --------------------------------------   -GERANDO O BANCO DE PALAVRAS-   ------------------------------------------
+		let palavras = Array.new(10);
+        let palavras[0] = "TENACIDADE";
+        let palavras[1] = "ETEREO";
+        let palavras[2] = "SUBLIME";
+        let palavras[3] = "ENCANTADOR";
+        let palavras[4] = "HARMONIOSO";
+        let palavras[5] = "MAGNIFICO";
+        let palavras[6] = "CELESTIAL";
+        let palavras[7] = "SERENO";
+        let palavras[8] = "MAJESTOSO";
+        let palavras[9] = "GRACIOSO";
+        // -------------------------------------------------------------------------------------------------------------------
+
+        // ----------------------------   -LÓGICA DA PALAVRA, SELEÇÃO E INCORPORAÇÃO NO ARRAY-   -----------------------------
+        // gerando um numero aleatorio com a funcao random e selecionando a palavra a partir dele
+        let random = Random.randRange(10);
+        let palavra = palavras[random];
+
+        // dividindo a PALAVRA (string) para dentro de um array
+        let i = 0;
+        let tamanho = palavra.length();
+        let array_da_palavra = Array.new(tamanho);
+        let array_oculto_da_palavra = Array.new(tamanho);
+
+        while (~(i = tamanho)) {
+            let c = palavra.charAt(i);
+            // let letra = Converter.conversao(c);
+            // do Output.printString(letra);
+            let array_da_palavra[i] = c;
+            let array_oculto_da_palavra[i] = "_";
+            let i = i + 1;
+        }
+        // -------------------------------------------------------------------------------------------------------------------
+
+        // --------------------------------------------------   -JOGO-   -----------------------------------------------------
+        // definindo as variáveis
+        let tentativas_restantes = 5;
+        let letras_corretas = 0;
+        let letras_erradas = Array.new(5);
+        let letras_erradas[0] = "_";
+        let letras_erradas[1] = "_";
+        let letras_erradas[2] = "_";
+        let letras_erradas[3] = "_";
+        let letras_erradas[4] = "_";
+        let j = 0;
+        let jogar = true;
+
+        while (jogar){
+            do Screen.clearScreen();
+            // desenhar as vidas com base nos erros
+            if (tentativas_restantes = 5){
+                do circulo1.draw();
+                do circulo2.draw();
+                do circulo3.draw();
+                do circulo4.draw();
+                do circulo5.draw();
+            } 
+            if (tentativas_restantes = 4){
+                do circulo2.draw();
+                do circulo3.draw();
+                do circulo4.draw();
+                do circulo5.draw();
+            } 
+            if (tentativas_restantes = 3){
+                do circulo2.draw();
+                do circulo3.draw();
+                do circulo4.draw();
+            } 
+            if (tentativas_restantes = 2){
+                do circulo3.draw();
+                do circulo4.draw();
+            } 
+            if (tentativas_restantes = 1){
+                do circulo3.draw();
+            }
+
+            // linha lateral esquerda
+            do Screen.drawRectangle(10, 11, 12, 245);
+            // linha lateral direita
+            do Screen.drawRectangle(499, 11, 501, 245);
+            // linha do topo
+            do Screen.drawRectangle(10, 11, 501, 13);
+            // linha do piso
+            do Screen.drawRectangle(10, 243, 501, 245);
+            // intrução do jogo
+            do Output.moveCursor(20,17);
+            do Output.printString("Pressione uma letra do teclado _");
+
+            // imprime a palavra de acordo com o que ainda há oculto
+            do Output.moveCursor(8,10);
+            do Output.printString("Advinhe: ");
+            do Output.moveCursor(8, 20);
+            let i = 0;
+            while (~(i = tamanho)) {
+                do Output.printString(array_oculto_da_palavra[i]);
+                do Output.printString(" ");
+                let i = i + 1;
+            }
+            // posicionamento e preenchimento das letras erradas
+            do Output.moveCursor(14,10);
+            do Output.printString("Letras Erradas:");
+            do Output.moveCursor(14,27);
+            let i = 0;
+            while (i < 5) {
+                do Output.printString(letras_erradas[i]);
+                do Output.printString(" ");
+                let i = i + 1;
+            }
+
+            // entrada e verificação de acerto
+            let key = 0;
+            while (key = 0){
+                let key = Keyboard.keyPressed();
+                do Sys.wait(50);
+            }
+            // let letra = Converter.conversao(key);
+
+            let letra_encontrada = false;
+            let i = 0;
+            while (~(i = tamanho)) {
+                if (key = array_da_palavra[i]) {
+                    let letra = Converter.conversao(key);
+                    let array_oculto_da_palavra[i] = letra;
+                    let letras_corretas = letras_corretas + 1; 
+                    let letra_encontrada = true;
+                }  
+                let i = i + 1;
+            }
+            if (~(letra_encontrada)) {
+                let letra = Converter.conversao(key);
+                let letras_erradas[j] = letra;
+                let tentativas_restantes = tentativas_restantes - 1;
+                let j = j + 1;
+            }
+            if (tentativas_restantes = 0){
+                let jogar = false;
+            }
+            if (letras_corretas = tamanho){
+                let jogar = false;
+            }
+        }
+
+        // ------------------------------------------------   -PÓS JOGO-   ----------------------------------------------------
+        do Screen.clearScreen();
+        // linha lateral esquerda
+        do Screen.drawRectangle(10, 11, 12, 245);
+        // linha lateral direita
+        do Screen.drawRectangle(499, 11, 501, 245);
+        // linha do topo
+        do Screen.drawRectangle(10, 11, 501, 13);
+        // linha do piso
+        do Screen.drawRectangle(10, 243, 501, 245);
+        // intrução do jogo
+        if (tentativas_restantes = 0){
+            do Output.moveCursor(11,25);
+            do Output.printString("__GAME OVER__");
+        } else {
+            do Output.moveCursor(11,17);
+            do Output.printString("__VOCE ACERTOU, PARABENS!__");
+            do Output.println();
+            do Output.moveCursor(13,25);
+            do Output.printString(palavra);
+        }
+        // -------------------------------------------------------------------------------------------------------------------
+		return;
+    }
+}

@@ -1,0 +1,315 @@
+function Converter.conversao 1
+push argument 0
+push constant 65
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 1
+call String.new 1
+push constant 65
+call String.appendChar 2
+pop local 0
+label IF_FALSE0
+push argument 0
+push constant 66
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 1
+call String.new 1
+push constant 66
+call String.appendChar 2
+pop local 0
+label IF_FALSE1
+push argument 0
+push constant 67
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 1
+call String.new 1
+push constant 67
+call String.appendChar 2
+pop local 0
+label IF_FALSE2
+push argument 0
+push constant 68
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 1
+call String.new 1
+push constant 68
+call String.appendChar 2
+pop local 0
+label IF_FALSE3
+push argument 0
+push constant 69
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 1
+call String.new 1
+push constant 69
+call String.appendChar 2
+pop local 0
+label IF_FALSE4
+push argument 0
+push constant 70
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 1
+call String.new 1
+push constant 70
+call String.appendChar 2
+pop local 0
+label IF_FALSE5
+push argument 0
+push constant 71
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push constant 1
+call String.new 1
+push constant 71
+call String.appendChar 2
+pop local 0
+label IF_FALSE6
+push argument 0
+push constant 72
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push constant 1
+call String.new 1
+push constant 72
+call String.appendChar 2
+pop local 0
+label IF_FALSE7
+push argument 0
+push constant 73
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 1
+call String.new 1
+push constant 73
+call String.appendChar 2
+pop local 0
+label IF_FALSE8
+push argument 0
+push constant 74
+eq
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push constant 1
+call String.new 1
+push constant 74
+call String.appendChar 2
+pop local 0
+label IF_FALSE9
+push argument 0
+push constant 75
+eq
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push constant 1
+call String.new 1
+push constant 75
+call String.appendChar 2
+pop local 0
+label IF_FALSE10
+push argument 0
+push constant 76
+eq
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push constant 1
+call String.new 1
+push constant 76
+call String.appendChar 2
+pop local 0
+label IF_FALSE11
+push argument 0
+push constant 77
+eq
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+push constant 1
+call String.new 1
+push constant 77
+call String.appendChar 2
+pop local 0
+label IF_FALSE12
+push argument 0
+push constant 78
+eq
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
+push constant 1
+call String.new 1
+push constant 78
+call String.appendChar 2
+pop local 0
+label IF_FALSE13
+push argument 0
+push constant 79
+eq
+if-goto IF_TRUE14
+goto IF_FALSE14
+label IF_TRUE14
+push constant 1
+call String.new 1
+push constant 79
+call String.appendChar 2
+pop local 0
+label IF_FALSE14
+push argument 0
+push constant 80
+eq
+if-goto IF_TRUE15
+goto IF_FALSE15
+label IF_TRUE15
+push constant 1
+call String.new 1
+push constant 80
+call String.appendChar 2
+pop local 0
+label IF_FALSE15
+push argument 0
+push constant 81
+eq
+if-goto IF_TRUE16
+goto IF_FALSE16
+label IF_TRUE16
+push constant 1
+call String.new 1
+push constant 81
+call String.appendChar 2
+pop local 0
+label IF_FALSE16
+push argument 0
+push constant 82
+eq
+if-goto IF_TRUE17
+goto IF_FALSE17
+label IF_TRUE17
+push constant 1
+call String.new 1
+push constant 82
+call String.appendChar 2
+pop local 0
+label IF_FALSE17
+push argument 0
+push constant 83
+eq
+if-goto IF_TRUE18
+goto IF_FALSE18
+label IF_TRUE18
+push constant 1
+call String.new 1
+push constant 83
+call String.appendChar 2
+pop local 0
+label IF_FALSE18
+push argument 0
+push constant 84
+eq
+if-goto IF_TRUE19
+goto IF_FALSE19
+label IF_TRUE19
+push constant 1
+call String.new 1
+push constant 84
+call String.appendChar 2
+pop local 0
+label IF_FALSE19
+push argument 0
+push constant 85
+eq
+if-goto IF_TRUE20
+goto IF_FALSE20
+label IF_TRUE20
+push constant 1
+call String.new 1
+push constant 85
+call String.appendChar 2
+pop local 0
+label IF_FALSE20
+push argument 0
+push constant 86
+eq
+if-goto IF_TRUE21
+goto IF_FALSE21
+label IF_TRUE21
+push constant 1
+call String.new 1
+push constant 86
+call String.appendChar 2
+pop local 0
+label IF_FALSE21
+push argument 0
+push constant 87
+eq
+if-goto IF_TRUE22
+goto IF_FALSE22
+label IF_TRUE22
+push constant 1
+call String.new 1
+push constant 87
+call String.appendChar 2
+pop local 0
+label IF_FALSE22
+push argument 0
+push constant 88
+eq
+if-goto IF_TRUE23
+goto IF_FALSE23
+label IF_TRUE23
+push constant 1
+call String.new 1
+push constant 88
+call String.appendChar 2
+pop local 0
+label IF_FALSE23
+push argument 0
+push constant 89
+eq
+if-goto IF_TRUE24
+goto IF_FALSE24
+label IF_TRUE24
+push constant 1
+call String.new 1
+push constant 89
+call String.appendChar 2
+pop local 0
+label IF_FALSE24
+push argument 0
+push constant 90
+eq
+if-goto IF_TRUE25
+goto IF_FALSE25
+label IF_TRUE25
+push constant 1
+call String.new 1
+push constant 90
+call String.appendChar 2
+pop local 0
+label IF_FALSE25
+push local 0
+return

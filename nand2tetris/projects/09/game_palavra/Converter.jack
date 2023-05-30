@@ -1,0 +1,32 @@
+class Converter {
+    function string conversao(int x) {
+        var String letra;
+        if (x = 65) { let letra = "A"; }
+        if (x = 66) { let letra = "B"; }
+        if (x = 67) { let letra = "C"; }
+        if (x = 68) { let letra = "D"; }
+        if (x = 69) { let letra = "E"; }
+        if (x = 70) { let letra = "F"; }
+        if (x = 71) { let letra = "G"; }
+        if (x = 72) { let letra = "H"; }
+        if (x = 73) { let letra = "I"; }
+        if (x = 74) { let letra = "J"; }
+        if (x = 75) { let letra = "K"; }
+        if (x = 76) { let letra = "L"; }
+        if (x = 77) { let letra = "M"; }
+        if (x = 78) { let letra = "N"; }
+        if (x = 79) { let letra = "O"; }
+        if (x = 80) { let letra = "P"; }
+        if (x = 81) { let letra = "Q"; }
+        if (x = 82) { let letra = "R"; }
+        if (x = 83) { let letra = "S"; }
+        if (x = 84) { let letra = "T"; }
+        if (x = 85) { let letra = "U"; }
+        if (x = 86) { let letra = "V"; }
+        if (x = 87) { let letra = "W"; }
+        if (x = 88) { let letra = "X"; }
+        if (x = 89) { let letra = "Y"; }
+        if (x = 90) { let letra = "Z"; }
+        return letra;
+    }
+}
